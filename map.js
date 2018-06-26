@@ -6,9 +6,9 @@ const map = [
     "    WWW  B WW         ",
     "    W  B B W          ",
     "WWWWW W WW W    WWWWWW",
-    "W   W WW WWWWWW OOOW",
+    "W     W WW WWWWWW OOOW",
     "W B B  B          OOOW",
-    "  WWWWW WWW WSWWW  OOW",
+    "WWWWWWW WWW WSWWW  OOW",
     "      W     WWW  WWWWW",
     "      WWWWWWW         ",
 ];
