@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sokoban</title>
+    <link type="text/css" rel="stylesheet" href="maze.css" />
+</head>
+    <body onload="redrawAvatar()">
+        <h1>Boxman and the amazon factory</h1>
+        <h3>Use the cursor keys to move Boxman.<br>
+            Push the brown boxes onto the pink circles.</h3>
+            <h4>If you goofed,<input type="button" value="Restart" onClick="window.location.reload()">
+            </h4>
+        <div id="mazeDiv">
+            <div id="avatar" class="hidden"></div>
+        </div>
+        <div id="youWonDiv" class="hidden">You <em>survived</em>!</div>
+        <script src="map.js"></script>
+        <script src="maze.js"></script>
+    </body>
+</html>
