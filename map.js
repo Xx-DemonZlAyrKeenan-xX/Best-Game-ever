@@ -1,16 +1,16 @@
 const map = [
-    "    WWWWWWW         ",
-    "    W     W         ",
-    "    W     W         ",
-    "    WB  B W         ",
-    "  WWW  B WW         ",
-    "  W  B B W          ",
-    "WWW W WW W    WWWWWW",
-    "W   W WW WWWWWW  OOW",
-    "W B  B          OOOW",
-    "WWWWW WWW WSWWW  OOW",
-    "    W     WWW  WWWWW",
-    "    WWWWWWW         ",
+    "      WWWWWWW         ",
+    "      W     W         ",
+    "      W     W         ",
+    "      WB  B W         ",
+    "    WWW  B WW         ",
+    "    W  B B W          ",
+    "WWWWW W WW W    WWWWWW",
+    "W   W WW WWWWWW OOOW",
+    "W B B  B          OOOW",
+    "  WWWWW WWW WSWWW  OOW",
+    "      W     WWW  WWWWW",
+    "      WWWWWWW         ",
 ];
 
 /* Alternate map
