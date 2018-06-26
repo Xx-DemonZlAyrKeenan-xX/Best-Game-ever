@@ -8,7 +8,7 @@ const map = [
     "WWW W WW W    WWWWWW",
     "W   W WW WWWWWW  OOW",
     "W B  B          OOOW",
-    "WWWWW WWW WSWWWW OOW",
+    "WWWWW WWW WSWWW  OOW",
     "    W     WWW  WWWWW",
     "    WWWWWWW         ",
 ];
