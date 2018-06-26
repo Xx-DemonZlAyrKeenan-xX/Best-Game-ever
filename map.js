@@ -9,7 +9,7 @@ const map = [
     "W     W WW WWWWWW OOOW",
     "W B B  B          OOOW",
     "WWWWWWW WWW WSWWW  OOW",
-    "      W     WWW  WWWWW",
+    "      W     WWW WWWWWW",
     "      WWWWWWW         ",
 ];
 
