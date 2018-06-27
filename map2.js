@@ -1,4 +1,4 @@
-const map2= [
+const map= [
     "      WWWWWWW    WWWW  ",
     "      W     WWWWWW  W  ",
     "      W B     B     W  ",
