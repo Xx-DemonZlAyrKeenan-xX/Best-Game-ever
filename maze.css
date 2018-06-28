@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(127, 91, 91);
+}
+
+#mazeDiv {
+    position: relative;
+}
+
+#avatar {
+    position: absolute; 
+    width: 33px; 
+    height: 33px; 
+    background: url('Boxman.png'); 
+    background-size: contain; 
+    transition: all 0.1s;
+}
+
+#youWonDiv {
+    position: absolute; 
+    left: 50px; 
+    top: 220px; 
+    width: 200px; 
+    height: 120px; 
+    font-size: 50px; 
+    background: lightgray; 
+    text-align: center; 
+    opacity: 0.9;
+}
+
+.hidden {
+    display: none;
+}
+
+.row {
+    display: flex; 
+    height: 33px;
+}
+
+.cell {
+    width: 33px; 
+    line-height: 33px;
+    text-align: center;
+}
+
+.W {
+    background: rgb(161, 137, 1);
+    border-style: dashed;
+    border-color: black;
+    border-width: 1px;
+    width: 31px;
+    height: 31px;
+
+}
+
+.O {
+    margin: 10px; 
+    width: 13px; 
+    border-radius: 9px; 
+    background: black;
+}
+
+.crate {
+    position: absolute; 
+    width: 31px; 
+    height: 31px; 
+    margin: 1px; 
+    background: url('Vase.png');
+    transition: all 0.1s;
+}

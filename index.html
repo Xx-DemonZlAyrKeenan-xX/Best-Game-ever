@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sokoban</title>
+    <link type="text/css" rel="stylesheet" href="maze.css" />
+</head>
+    <body onload="redrawAvatar()">
+        <h1>Boxman and the forgotten temple</h1>
+        <h3>Use the cursor keys to move Boxman.<br>
+            Push the vases on to the pressure plates to win!</h3>
+            <h4>To properly get the new level,<input type="button" value="Restart" onClick="window.location.reload()">and click on the level.
+            </h4>
+            <h3><input type="button" value="Tutorial" onClick= "chooselevel(1)"></h3>
+                <h3><input type="button" value="Hardmode" onClick= "chooselevel(2)"></h3>
+                    
+        <div id="mazeDiv">
+            <div id="avatar" class="hidden"></div>
+        </div>
+        <div id="youWonDiv" class="hidden">You <em>survived</em>!</div>
+        <script src="map1.js"></script>
+        <script src="map2.js"></script>
+        <script src="maze.js"></script>
+    </body>
+</html>
