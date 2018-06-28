@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sokoban</title>
-    <link type="text/css" rel="stylesheet" href="maze4.css" />
+    <link type="text/css" rel="stylesheet" href="maze.css" />
 </head>
     <body onload="redrawAvatar()">
         <h1>Boxman and the amazon factory</h1>
@@ -11,11 +11,15 @@
             Push the brown boxes onto the pink circles.</h3>
             <h4>If you goofed,<input type="button" value="Restart" onClick="window.location.reload()">
             </h4>
+            <h3><input type="button" value="Tutorial" onClick= "chooselevel(1)"></h3>
+                <h3><input type="button" value="Hardmode" onClick= "chooselevel(2)"></h3>
+                    
         <div id="mazeDiv">
             <div id="avatar" class="hidden"></div>
         </div>
         <div id="youWonDiv" class="hidden">You <em>survived</em>!</div>
-        <script src="map.js"></script>
+        <script src="map1.js"></script>
+        <script src="map2.js"></script>
         <script src="maze.js"></script>
     </body>
 </html>
