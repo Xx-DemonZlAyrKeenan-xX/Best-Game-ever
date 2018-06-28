@@ -69,8 +69,9 @@ body {
     transition: all 0.1s;
 }
 .zelder {
-    width: 200px;
-    height: 150px;
+    width: 400px;
+    height: 300px;
+    float: right;
 }
 h1 {
     color: white;
