@@ -1,5 +1,5 @@
 
-const map = [
+const map1 = [
     "      WWWWW      ",
     "     WW   WW     ",
     "    WW  B  WW    ",
