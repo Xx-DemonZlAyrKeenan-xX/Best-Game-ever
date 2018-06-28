@@ -68,3 +68,7 @@ body {
     background: url('Vase.png');
     transition: all 0.1s;
 }
+.zelder {
+    width: 200px;
+    height: 150px;
+}
