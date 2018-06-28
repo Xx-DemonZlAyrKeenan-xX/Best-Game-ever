@@ -1,5 +1,5 @@
 
-const map3= [
+const map2= [
    "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW ",
    "WS    W B            OWOWOWWOO      W ",
    "WWWWW W WWWWWWWWWW B WW W WWWWWWWB BW ",
