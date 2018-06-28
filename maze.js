@@ -1,6 +1,17 @@
 // DOM elements to intereact with
+let map = map1
+function chooselevel(level) {
+    if (level === 1) {
+        map = map1
+    }
+    else {
+        map = map2
+    }
+    drawboard()
+}
+
 const mazeDiv = document.getElementById("mazeDiv");
-const avatarDiv = document.getElementById("avatar");
+let avatarDiv = document.getElementById("avatar");
 const youWonDiv = document.getElementById("youWonDiv")
 
 // Size of the squares in the grid, in pixels.
@@ -11,7 +22,7 @@ let avatarRow;
 let avatarCol;
 
 // Separate array for keeping track of the moving crates.
-const crates = [];
+let crates = [];
 
 // START HERE -----------------------------------------------------------------/
 // While the maze project only kept track of (W)alls, the player's
@@ -31,37 +42,47 @@ const crates = [];
 // other words, X is a tile that has both a box and something indicating it as
 // storage at the same time.
 let storage = [];
-for (let row = 0; row < map.length; row++) {
-    const rowStr = map[row];
-    const rowDiv = document.createElement("div");
-    rowDiv.className = "row";
+function drawboard() {
+    crates = []
+    storage = []
 
-    let x = [];
-    crates.push(x);
-    storage.push([]);
-    for (let i = 0; i < rowStr.length; i++) {
-        let cellClass = rowStr[i];
-        const cellDiv = document.createElement("div");
+    mazeDiv.innerHTML = '<div id="avatar" class="hidden"></div>'
 
-        cellDiv.className = "cell " + cellClass;
+    avatarDiv = document.getElementById("avatar");
 
 
-        if (cellClass === "S") {
-            avatarCol = i;
-            avatarRow = row;
+    for (let row = 0; row < map.length; row++) {
+        const rowStr = map[row];
+        const rowDiv = document.createElement("div");
+        rowDiv.className = "row";
+
+        let x = [];
+        crates.push(x);
+        storage.push([]);
+        for (let i = 0; i < rowStr.length; i++) {
+            let cellClass = rowStr[i];
+            const cellDiv = document.createElement("div");
+
+            cellDiv.className = "cell " + cellClass;
+
+
+            if (cellClass === "S") {
+                avatarCol = i;
+                avatarRow = row;
+            }
+
+            if (cellClass === "B") {
+                let box = crate(row, i);
+                crates[row][i] = box;
+            } else {
+                crates[row][i] = "";
+            }
+            storage[row].push(cellDiv);
+            rowDiv.appendChild(cellDiv);
         }
-
-        if (cellClass === "B") {
-            let box = crate(row, i);
-            crates[row][i] = box;
-        } else {
-            crates[row][i] = "";
-        }
-        storage[row].push(cellDiv);
-        rowDiv.appendChild(cellDiv);
+        mazeDiv.appendChild(rowDiv);
+        console.log(crates);
     }
-    mazeDiv.appendChild(rowDiv);
-    console.log(crates);
 }
 // Continue to STEP 2
 
@@ -113,18 +134,18 @@ function move(dRow, dCol) {
     //
     // You will then need to move the player if the destination cell is empty.
     // Continue to STEP 3
-    
+
     if (crateCheck) {
         // Calculate the coordinates we would need to push the crate.
         const crateDestRow = destRow + dRow;
         const crateDestCol = destCol + dCol;
-        
+
         // If there's no walls or in the way, Push the crate.
-        if ( map[crateDestRow][crateDestCol] !== "W" && map[crateDestRow][crateDestCol].className !== "crate" && crates[crateDestRow][crateDestCol] == "") {
-        crates[crateDestRow][crateDestCol] = crateCheck;
-        crates[destRow][destCol] = "";
-        crateCheck.style.top = crateDestRow * delta + "px";
-        crateCheck.style.left = crateDestCol * delta + "px";
+        if (map[crateDestRow][crateDestCol] !== "W" && map[crateDestRow][crateDestCol].className !== "crate" && crates[crateDestRow][crateDestCol] == "") {
+            crates[crateDestRow][crateDestCol] = crateCheck;
+            crates[destRow][destCol] = "";
+            crateCheck.style.top = crateDestRow * delta + "px";
+            crateCheck.style.left = crateDestCol * delta + "px";
         }
 
     }
@@ -147,16 +168,16 @@ function checkForWin() {
     // STEP 3 -----------------------------------------------------------------/
     // Write a function that checks if the player won. A player wins when all
     // boxes are moved over all storage spaces.
-    for (let row = 0; row <map.length; row++) {
+    for (let row = 0; row < map.length; row++) {
         for (let col = 0; col < map[row].length; col++) {
             if (crates[row][col] !== "") {
-                if(map[row][col] !== "O") {
+                if (map[row][col] !== "O") {
                     return;
                 }
             }
         }
     }
-    
+
     youWonDiv.classList.remove("hidden");
 }
 
