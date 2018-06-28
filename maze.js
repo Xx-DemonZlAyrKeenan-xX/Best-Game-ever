@@ -5,10 +5,10 @@ function chooselevel(level) {
         map = map1
     }
     else if (level === 2) {
-        map = map2
+        map = map3
     }
     else {
-        map = map3
+        map = map2
     }
     drawboard()
 }
