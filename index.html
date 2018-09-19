@@ -8,6 +8,10 @@
     <body onload="redrawAvatar()">
         <h2>Link and the forgotten temple</h2>
                 <script src="map1.js"></script>
+                <div id="mazeDiv">
+            <div id="avatar" class="hidden"></div>
+        </div>
+        <div id="youWonDiv" class="hidden">You <em>survived</em>!</div>
         <script src="map2.js"></script>
         <script src="map3.js"></script>
         <script src="maze.js"></script>
@@ -15,9 +19,5 @@
         <h3>Use the cursor keys to move Link. Push the vases on to the pressure plates to win! <input type="button" value="Restart" onClick="window.location.reload()"></h3>
             <h3><input type="button" value="Tutorial" onClick= "chooselevel(1)"></h3><h3><input type="button" value="Normal" onClick= "chooselevel(3)"></h3><h3><input type="button" value="Hardmode" onClick= "chooselevel(2)"></h3>
                     
-        <div id="mazeDiv">
-            <div id="avatar" class="hidden"></div>
-        </div>
-        <div id="youWonDiv" class="hidden">You <em>survived</em>!</div>
     </body>
 </html>
